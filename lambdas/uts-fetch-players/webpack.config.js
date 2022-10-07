@@ -1,4 +1,5 @@
 const path = require('path');
+var ZipPlugin = require('zip-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -18,4 +19,9 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'build'),
   },
+  plugins: [
+    new ZipPlugin({
+      filename: 'uts-fetch-players.zip'
+    })
+  ]
 };
