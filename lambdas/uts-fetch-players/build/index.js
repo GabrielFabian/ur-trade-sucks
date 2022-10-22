@@ -19,14 +19,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fooHandler = void 0;
 const fooHandler = (event) => {
     if ('Records' in event) {
-        // SNSEvent
         const records = event.Records;
-        // testing something
     }
     else {
         const { id, version, region, source } = event;
     }
-    console.log("testing some shit");
 };
 exports.fooHandler = fooHandler;
 

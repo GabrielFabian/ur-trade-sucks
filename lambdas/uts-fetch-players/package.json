@@ -7,9 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf build",
     "build": "webpack --config webpack.config.js",
-    "pack": "echo 'webpack this puppy up'",
-    "upload": "echo 'todo: upload to s3",
-    "deploy": "echo 'put terraform in this package, let it do the heavy lifting"
+    "deploy": "cd ./terraform &&  terraform plan && terraform apply"
   },
   "author": "Gabe Fabian",
   "license": "ISC",
