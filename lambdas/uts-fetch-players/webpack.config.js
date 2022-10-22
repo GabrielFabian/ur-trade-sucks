@@ -1,5 +1,4 @@
 const path = require('path');
-var ZipPlugin = require('zip-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -13,15 +12,21 @@ module.exports = {
     ],
   },
   resolve: {
+    modules: ["node_modules"],
     extensions: ['.tsx', '.ts', '.js'],
+  },
+  target: "node",
+  optimization: {
+    minimize: false,
+    nodeEnv: false,
+  },
+  externals: {
+    "aws-sdk": "aws-sdk"
   },
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'build'),
+    libraryTarget: 'umd'
   },
-  plugins: [
-    new ZipPlugin({
-      filename: 'uts-fetch-players.zip'
-    })
-  ]
+  mode: "production"
 };
