@@ -12,11 +12,21 @@ module.exports = {
     ],
   },
   resolve: {
+    modules: ["node_modules"],
     extensions: ['.tsx', '.ts', '.js'],
+  },
+  target: "node",
+  optimization: {
+    minimize: false,
+    nodeEnv: false,
+  },
+  externals: {
+    "aws-sdk": "aws-sdk"
   },
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'build'),
     libraryTarget: 'umd'
   },
+  mode: "production"
 };

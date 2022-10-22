@@ -1,1 +1,38 @@
-!function(e,o){if("object"==typeof exports&&"object"==typeof module)module.exports=o();else if("function"==typeof define&&define.amd)define([],o);else{var r=o();for(var t in r)("object"==typeof exports?exports:e)[t]=r[t]}}(self,(()=>(()=>{"use strict";var e={};return(()=>{var o=e;Object.defineProperty(o,"__esModule",{value:!0}),o.fooHandler=void 0,o.fooHandler=e=>{if("Records"in e)e.Records;else{const{id:o,version:r,region:t,source:f}=e}}})(),e})()));
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(global, () => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it uses a non-standard name for the exports (exports).
+(() => {
+var exports = __webpack_exports__;
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.fooHandler = void 0;
+const fooHandler = (event) => {
+    if ('Records' in event) {
+        // SNSEvent
+        const records = event.Records;
+        // testing something
+    }
+    else {
+        const { id, version, region, source } = event;
+    }
+    console.log("testing some shit");
+};
+exports.fooHandler = fooHandler;
+
+})();
+
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
