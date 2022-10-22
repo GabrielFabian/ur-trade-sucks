@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("Hello world!")})();
+!function(e,o){if("object"==typeof exports&&"object"==typeof module)module.exports=o();else if("function"==typeof define&&define.amd)define([],o);else{var r=o();for(var t in r)("object"==typeof exports?exports:e)[t]=r[t]}}(self,(()=>(()=>{"use strict";var e={};return(()=>{var o=e;Object.defineProperty(o,"__esModule",{value:!0}),o.fooHandler=void 0,o.fooHandler=e=>{if("Records"in e)e.Records;else{const{id:o,version:r,region:t,source:f}=e}}})(),e})()));
